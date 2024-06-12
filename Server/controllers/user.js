@@ -160,7 +160,7 @@ module.exports.checkPaymentStatus = async (req, res) => {
     }
 }
 
-module.exports.instaMojoWebHook = async () => {
+module.exports.instaMojoWebHook = async (req,res) => {
     try {
         let { purpose, payment_id } = req.body;
         let newConsultation = await Consultation.findOne({ consultationId: purpose })
@@ -185,8 +185,7 @@ module.exports.instaMojoWebHook = async () => {
         await newConsultation.save()
         res.send({ status: "success", paymentSuccessfull: paymentStatusResponse.status })
     } catch (error) {
-        res.status=500;
-        res.send({error:true})
+        res.status(500).send({error:true})
     }
 }
 
