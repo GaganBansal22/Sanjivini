@@ -47,6 +47,11 @@ Use the following test credentials to explore the platform:
     - **Email**: doc@gmail.com
     - **Password**: doc
 
+- **Test Card Details for Payment**:
+    - **Card Number**: 4242 4242 4242 4242
+    - **Expiration Date**: 1/25
+    - **CVV**: 123
+
 ## Contributing
 
 We welcome contributions to improve Sanjivini! To contribute, please fork the repository, create a new branch for your feature or bugfix, and submit a pull request.
