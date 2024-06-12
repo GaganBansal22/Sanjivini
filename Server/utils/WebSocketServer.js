@@ -48,7 +48,6 @@ module.exports.terminateDeadConnections = (connection, req) => {
 module.exports.handleIncomingMessage = async (message, connection, wss) => {
     try {
         const messageData = JSON.parse(message.toString());
-        console.log(messageData)
         if(messageData.forAuthentication)
             return verifyUserForWsConnection(connection, messageData._id)
         if(!connection.doctor && !connection.user) return;
