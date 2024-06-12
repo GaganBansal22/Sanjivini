@@ -103,7 +103,7 @@ const VideoCallComponent = ({ ws }) => {
   if (!callStarted) return (<></>)
   return (
     <>
-      <div className="w-full min-h-[100vh] z-10 sticky top-0 bg-black bg-opacity-90 ">
+      <div className="w-full min-h-[100vh] z-30 sticky top-0 bg-black bg-opacity-90 ">
         {showCallEnded ?
           <>
             <div className='min-h-[100vh] flex items-center justify-center text-center text-4xl text-white' >
